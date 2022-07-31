@@ -1,0 +1,27 @@
+//criando valores de velocidade 
+hspd = 0;
+vspd = 0;
+movex=0;
+movey=0;
+spd = 3;
+animacao= (spr_slime_run);
+parado = (spr_slime);
+
+//movimento x
+movex = -keyboard_check(vk_left) +keyboard_check(vk_right);
+hspd = movex*spd;
+x+=hspd;
+//movimento y
+movey = -keyboard_check(vk_up) +keyboard_check(vk_down);
+vspd=movey*spd;
+y+=vspd;
+
+if abs(vspd) or abs(hspd)
+{
+	sprite_index = animacao;
+}
+
+else
+{
+	sprite_index = parado;
+} 
